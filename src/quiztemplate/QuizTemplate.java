@@ -9,15 +9,6 @@ public class QuizTemplate {
     static char resposta;
     static int acertos = 0;
 
-    public static void clrscr(){//metodo para limpar a tela
-        try {
-            if (System.getProperty("os.name").contains("Windows"))
-                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-            else
-                Runtime.getRuntime().exec("clear");
-        } catch (IOException | InterruptedException ex) {}
-    }
-
     public static void Q1()throws IOException{//Esta função pode ser repetida para quantas perguntas forem necessárias
         char correta = 'A';//modificar para a resposta correta
         System.out.println("Questão 1: Escrever Pergunta aqui.");//caso precisar de quebra de linha, fazer outro System.out
